@@ -23,9 +23,9 @@
                             <div class="avatar-name">
                                 Michele
                             </div>
-                            <i class="fa-solid fa-spinner"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-spinner "></i>
+                            <i class="fa-solid fa-message "></i>
+                            <i class="fa-solid fa-ellipsis-vertical "></i>
                     </div>
                    <div class="message-notification">
                         <div class="notification">
@@ -48,26 +48,41 @@
                                     <div class="general-contact">
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`name${contact.name}`">
                                         <div class="avatar-general">
-                                        <span>{{contact.name}}</span>
-                                        <p class="avatar-contact">{{contact.messages[contact.messages.length-1].message}}</p>
-                                    </div>
+                                            <span>{{contact.name}}</span>
+                                            <p class="avatar-contact">{{contact.messages[contact.messages.length-1].message}}</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li><small class="date-contact">12:00</small></li>
                             </ul>
-                        </div>
-                            
-                                
-                        
+                        </div>                                     
                     </div>
                 </div>
                 <div class="box-header-right">
                     <div class="avatar-right">
-                        <img class="avatar-img" src="img/avatar_2.jpg" alt="">
-                        <div class="avatar-name">
-                            Michele
-                        </div>              
+                        <div class="general-contact">
+                            <img src="img/avatar_1.jpg" alt="">
+                            <div class="avatar-general">
+                                <span>Michele</span>
+                                <p class="avatar-contact">Ultimo accesso alle ore 12:00</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-magnifying-glass icon-right"></i>
+                            <i class="fa-solid fa-paperclip icon-right"></i>
+                            <i class="fa-solid fa-ellipsis-vertical icon-right"></i>
+                        </div>
                     </div>
+                    <div class="messagge-body">
+                        <div class="sent">
+                            <div class="sent_message">Hai portato a spasso il cane?</div>
+                            <div class="sent_message">Hai steso i panni?</div> 
+                        </div>
+                        <div class="receive">
+                            <div class="receive-message">Tutto fatto!</div>
+                        </div>
+                    </div>
+                        
                 </div>                      
         </div>
         <script src="js/main.js"></script>
