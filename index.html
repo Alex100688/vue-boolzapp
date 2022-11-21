@@ -59,9 +59,9 @@
                     </div>
                 </div>
                 <div class="box-header-right">
-                    <div v-for="(contact, index) in contacts" class="avatar-right">
-                        <div v-if="messageActive > index?" class="general-contact">
-                            <img :src="" alt="">
+                    <div  class="avatar-right">
+                        <div class="general-contact">
+                            <img src="img/avatar_1.jpg" alt="">
                             <div class="avatar-general">
                                 <span>Michele</span>
                                 <p class="avatar-contact">Ultimo accesso alle ore 12:00</p>
@@ -73,16 +73,19 @@
                             <i class="fa-solid fa-ellipsis-vertical icon-right"></i>
                         </div>
                     </div>
-                    <div class="messagge-body">
-                        <div class="sent">
-                            <div class="sent_message">Hai portato a spasso il cane?</div>
-                            <div class="sent_message">Hai steso i panni?</div> 
+                    <div  class="messagge-body">
+                        <div v-for="(contact, index) in contacts" class="sent">
+                            <div class="sent_message">{{contact.messages[contact.messages].message}}</div>
                         </div>
                         <div class="receive">
                             <div class="receive-message">Tutto fatto!</div>
                         </div>
                     </div>
-                        
+                    <form class="form-message" action="">
+                        <button class="brt-write"><i class="fa-regular fa-face-smile"></i></button>
+                       <input class="write-message" type="text" placeholder="scrivi un nuovo messaggio" name="" id="">
+                        <button class="brt-write"><i class="fa-solid fa-microphone"></i></button>
+                    </form>
                 </div>                      
         </div>
         <script src="js/main.js"></script>
