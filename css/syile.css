@@ -17,8 +17,130 @@ body{
 /* rules for container */
 .container{
    max-width: 75rem;
+   height: 100%;
    margin: auto;
    display: flex;
    background-color: #ffff;
+}
+/* rules for box left and box right */
+.box-header-left{   
+    width: 35%; 
+}
 
+.box-header-right{
+    width: 65%;
+}
+.box-header-left, .box-header-right{
+    display: flex;
+    flex-direction: column;
+    background-color:#eaeaea;
+    
+}
+/* rules for avatar left */
+.avatar-left, .avatar-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+img{
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    margin-left:1 .875rem;
+
+}
+.avatar-name{
+    margin-right: 15.625rem;
+}
+.fa-spinner, .fa-message, .fa-ellipsis-vertical, .fa-magnifying-glass, .search-left{
+    color: #b1b1b1;
+}
+
+/* rules for message notification */
+.message-notification{
+    background-color: #8edafc;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    margin-top: .9375rem;
+}
+
+.notification{
+    display: inline-block;
+    margin-left: .9375rem;
+    color: #8edafc;
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #ffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.875rem;
+}
+.receive-message{
+    font-weight: bold;
+    padding-left: .625rem;
+}
+small, .receive-message, .avatar-contact, .date-contact{
+    font-size: .75rem;
+}
+
+small{
+    display: block;
+    color: grey;
+    text-decoration: underline;
+}
+
+/* search contacts */
+.contact{
+    margin-top: .9375rem;
+    overflow-y: scroll; 
+    background-color: white;
+}
+.brt-search{
+    border: none;
+    cursor: pointer;
+}
+.form-search{
+    display: flex;
+    align-items: center;
+    height: 1.25rem;
+    padding-top: 1.5625rem;
+    margin-left:.9375rem;
+   
+}
+.search-left{
+    border: none;
+    margin-left: 1.25rem;
+}
+
+
+/* rules for avatar-righ */
+.all-contacts{
+    background-color:#eaeaea ;
+}
+.list-contacts{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 1.5625rem;
+    margin-left: .9375rem;
+}
+.general-contact{
+    display: flex;
+    align-items: flex-start;
+}
+.contact-name{
+    display: flex;
+}
+.avatar-name{
+    margin-left: .9375rem;
+}
+.avatar-contact, .date-contact{
+    text-decoration: none;
+    color: grey;
+}
+.avatar-general{
+    display: flex;
+    flex-direction: column;
 }

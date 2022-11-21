@@ -17,11 +17,58 @@
     </head>
     <body>
         <div id="app" class="container">
-            <header>
-                <h1>ciao</h1>
-            </header>
-            <main></main>             
-            
+                <div class="box-header-left">
+                    <div class="avatar-left">
+                        <img class="avar-image" src="img/avatar_1.jpg" alt="">
+                            <div class="avatar-name">
+                                Michele
+                            </div>
+                            <i class="fa-solid fa-spinner"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                   <div class="message-notification">
+                        <div class="notification">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <span class="receive-message">
+                            Ricevi notifiche di nuovi messaggi
+                            <small>Attiva notifiche desktop</small>
+                        </span>
+                    </div>
+                    
+                    <div class="contact">
+                        <form class="form-search" action="">
+                             <button class="brt-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                             <input class="search-left" type="search" placeholder="Cerca ho inizia una nuova ricerca" name="" id="" required>
+                        </form>
+                        <div class="all-contacts">
+                            <ul v-for="(contact, index) in contacts" class="list-contacts">
+                                <li>
+                                    <div class="general-contact">
+                                        <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`name${contact.name}`">
+                                        <div class="avatar-general">
+                                        <span>{{contact.name}}</span>
+                                        <p class="avatar-contact">{{contact.messages[contact.messages.length-1].message}}</p>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li><small class="date-contact">12:00</small></li>
+                            </ul>
+                        </div>
+                            
+                                
+                        
+                    </div>
+                </div>
+                <div class="box-header-right">
+                    <div class="avatar-right">
+                        <img class="avatar-img" src="img/avatar_2.jpg" alt="">
+                        <div class="avatar-name">
+                            Michele
+                        </div>              
+                    </div>
+                </div>                      
         </div>
         <script src="js/main.js"></script>
     </body>
