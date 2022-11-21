@@ -38,9 +38,9 @@
                     </div>
                     
                     <div class="contact">
-                        <form class="form-search" action="">
+                        <form @submit.prevent="active" class="form-search" action="">
                              <button class="brt-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                             <input class="search-left" type="search" placeholder="Cerca ho inizia una nuova ricerca" name="" id="" required>
+                             <input v-model="messageActive" :class="active" class="search-left" type="search" placeholder="Cerca ho inizia una nuova chat" name="" id="" required>
                         </form>
                         <div class="all-contacts">
                             <ul v-for="(contact, index) in contacts" class="list-contacts">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
                 <div class="box-header-right">
-                    <div class="avatar-right">
-                        <div class="general-contact">
-                            <img src="img/avatar_1.jpg" alt="">
+                    <div v-for="(contact, index) in contacts" class="avatar-right">
+                        <div v-if="messageActive > index?" class="general-contact">
+                            <img :src="" alt="">
                             <div class="avatar-general">
                                 <span>Michele</span>
                                 <p class="avatar-contact">Ultimo accesso alle ore 12:00</p>

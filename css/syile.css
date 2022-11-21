@@ -111,6 +111,7 @@ small{
 }
 .search-left{
     border: none;
+    width: 100%;
     margin-left: 1.25rem;
 }
 
@@ -169,16 +170,19 @@ small{
     align-items: flex-end;
     margin-top: 3.75rem;
     margin-right: .9375rem;
+    min-width: 6.25rem;
+    min-height: 6.25rem;
     
 }  
 .sent, .receive{
     display: flex;
     flex-direction: column;
-    min-width: 6.25rem;
-    min-height: 6.25rem;
 }
 .receive{
     margin-left: .9375rem;
+    min-width: 6.25rem;
+    min-height: 6.25rem;
+   
 }
  .sent_message{
      justify-content: flex-end;
@@ -187,6 +191,14 @@ small{
     .sent_message, .receive-message {
         display: flex;
         margin-top: .9375rem;
+}
+.receive-message{
+    background-color: white;
+
+}
+
+.active{
+    background-color: white;
 }
 
 
